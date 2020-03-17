@@ -3,12 +3,16 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# Use triggers to run a pipeline automatically.
+# Any changes in master will trigger the job
 trigger:
 - master
 
+#  An agent is installable software that runs one job at a time.
 pool:
   vmImage: 'ubuntu-latest'
 
+# Steps are nothing bt the tasks you want to perform during the build process
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
